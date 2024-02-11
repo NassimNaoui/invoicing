@@ -15,6 +15,7 @@ ADRESSE DE COMANDE / BUYER ADDRESS
 FACTURE N°
 ADRESSE DE LIVRAISON / CONSIGNEE ADDRESS
 
+
 - header middle left
 N° de confirmation / Order nr 
 N° de commande client / Y/references 

@@ -10,10 +10,12 @@ body {
 
 .field-title {
     font-family: Roboto;
+    font-size: small;
 }
 
 .field {
-    font-family: Inconsolata
+    font-family: Inconsolata;
+    font-size: small;
 }
 
 .header-logo {
@@ -25,13 +27,70 @@ body {
 }
 
 .header-top {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-top-left, .header-top-right {
     display: flex;
     flex-direction: column;
 }
 
-.header-top-left {
+.header-top-right {
     display: flex;
-    justify-content: left;
-    align-items: left;
     flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+
+.header-top-right .field {
+    font-weight: 900;
+}
+
+.header-mid {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    font-size: 9px;
+}
+
+.header-mid-left, .header-mid-center, .header-mid-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-mid .field {
+    font-weight: 900;
+}
+
+.header-bottom {
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.header-bottom .field {
+    font-weight: 900;
+}
+
+table {
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: gray;
+    font-family: Roboto;
+}
+
+th, td {
+    border: 1px solid #101415;
+    text-align: center;
+}
+
+tbody {
+    font-family: Inconsolata
 }

@@ -8,17 +8,87 @@
 </head>
 <body>
     <div class = "header-logo">
-        <img src="./img/BMI Logo RVB NEW.jpg" style="height: 70px;">
-        <img src="./img/Logo-siplast-09-23.jpg" style="height: 60px;">
+        <img src="./img/BMI Logo RVB NEW.jpg" style="height: 50px;">
+        <img src="./img/Logo-siplast-09-23.jpg" style="height: 40px;">
     </div>
     <div class = "header-top">
         <div class ="header-top-left">
-            <a> <span class="field-title", style="font-weight: bold;"> FACTURE N°</span> <span class="field" style="font-weight: bold;">{{invoice_number}}</span> </a>
+            <a> <span class="field-title", style="font-weight: bold; font-size: 25px"> FACTURE N°</span> <span class="field" style="font-weight: bold; font-size: 25px;">{{invoice_number}}</span> </a>
             <br>
-            <a class="field-title">ADRESSE DE LIVRAISON / CONSIGNEE ADDRESS</a>
-            <a class="field">{{consignee_adress}}</a>
+            <div style="margin-top: auto;">
+                <a class="field-title" >ADRESSE DE LIVRAISON</a>
+                <br>
+                <a class="field">{{consignee_adress}}</a>
+            </div>
         </div>
-        <div class ="header-top-right"></div>
+        <div class ="header-top-right">
+            <a> <span class="field-title"> Date d'expédition</span> <span class="field">{{dispatching_date}}</span></a>
+            <a> <span class="field-title"> N° identifiant TVA</span> <span class="field">{{vat_nr}}</span></a>
+            <a> <span class="field-title"> Vos références</span> <span class="field">{{y_references}}</span></a>
+            <a> <span class="field-title"> Date de facture</span> <span class="field">{{invoiced_date}}</span></a>
+            <a class="field-title"> ADRESSE DE COMMANDE</a>
+            <a class="field" style="font-weight: normal;">{{buyer_adress}}</a>
+        </div>
     </div>
+    <div class="header-mid">
+        <div class="header-mid-left">
+            <a> <span class="field-title">N° de confirmation </span> <span class="field"> {{order_nr}}</span> </a>
+            <a> <span class="field-title">N° commande client </span> <span class="field"> {{y_references_order}}</span> </a>
+            <a> <span class="field-title">N° de bon de livraison </span> <span class="field"> {{delivery_note_nr}}</span> </a>
+            <a> <span class="field-title">Condition de livraison </span> <span class="field"> {{incoterm}}</span> </a>
+        </div>
+        <div class="header-mid-center">
+            <a> <span class="field-title">Usine d'expédition </span> <span class="field"> {{factory}}</span> </a>
+            <a> <span class="field-title">Mode de transport </span> <span class="field"> {{transport}}</span> </a>
+            
+        </div>
+        <div class="header-mid-right">
+            <a> <span class="field-title">Délégué </span> <span class="field"> {{salesman}}</span> </a>
+            <a> <span class="field-title">Port d'embarquement </span> <span class="field"> {{loading_port}}</span> </a>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="header-bottom-left">
+            <a> <span class="field-title">Coordonnées bancaires du fournisseur </span> <span class="field"> {{sellers_bank}}</span> </a>
+        </div>
+        <div class="header-bottom-right">
+            <a> <span class="field-title">Devise </span> <span class="field"> {{currency}}</span> </a>
+        </div>
+    </div>
+    <table>
+       <thead> 
+            <tr>
+                <th rowspan="2">Ligne</th>
+                <th rowspan="2">Code produit</th>
+                <th rowspan="2">Désignation produit</th>
+                <th colspan="4" scope="colgroup">Qté facturée</th>
+                <th rowspan="2">Prix unitaire</th>
+                <th rowspan="2">Eco-contribution</th>
+                <th rowspan="2">Montant ligne</th>
+            </tr>
+            <tr>
+                <th scope="col">Qté</th>
+                <th scope="col">UN</th>
+                <th scope="col">Qté</th>
+                <th scope="col">UR</th>
+            </tr>
+    </thead>
+    <tbody>
+        {% for item in items %}
+        <tr>
+            <td>{{ligne}}</td>
+            <td>{{sku}}</td>
+            <td>{{material}}</td>
+            <td>{{qty_1}}</td>
+            <td>{{UQ}}</td>
+            <td>{{qty_2}}</td>
+            <td>{{UQA}}</td>
+            <td>{{unit_price}}</td>
+            <td>{{zeco}}</td>
+            <td>{{line_amount}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
 </body>
 </html>
