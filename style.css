@@ -94,3 +94,67 @@ th, td {
 tbody {
     font-family: Inconsolata
 }
+
+.footer-top {
+    gap: 50px;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+
+.footer-top-row-1, .footer-top-row-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-top-row-1-left, .footer-top-row-2-left {
+    display: flex;
+    border-right: 1px solid #101415;
+    border-bottom: 1px solid #101415;
+    border-left: 1px solid #101415;
+    width: 436px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-top-row-1-right {
+    display: flex;
+    width: 235px;
+    text-align: left;
+    justify-content : space-between;
+    flex-direction: column;
+}
+.footer-top-row-2-right {
+    display: flex;
+    width: 235px;
+    text-align: left;
+    flex-direction: column;
+    justify-content : space-between;
+}
+
+.footer-top-row-2-left {
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-top-row-1-right .field {
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.footer-top-row-2-right .field {
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.footer-top-row-2-left-col-1 .field {
+    font-weight: 900;
+}
+
+.footer-top-row-2-left-col-2 {
+    display: flex;
+    font-weight: 900;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}

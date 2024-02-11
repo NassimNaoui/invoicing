@@ -90,5 +90,35 @@
         {% endfor %}
     </tbody>
     </table>
+    <div class="footer-top">
+        <div class="footer-top-row-1">
+            <div class="footer-top-row-1-left">
+                <div> <span class="field-title">Poids net</span> <span class="field">{{net_weight}}</span></div>
+                <div> <span class="field-title">Poids brut</span> <span class="field">{{gross_weight}}</span></div>
+            </div>
+            <div class="footer-top-row-1-right">
+                <div> <span class="field-title">Total HT produits</span> <span class="field">{{total_of_goods}}</span></div>
+                <div> <span class="field-title">Total éco-contribution</span> <span class="field">{{total_zeco}}</span></div>
+            </div>
+        </div>
+        <div class="footer-top-row-2">
+            <div class="footer-top-row-2-left">
+                <div class="footer-top-row-2-left-col-1">
+                    <div class="field-title">Condition de paiement </div>
+                    <div class="field">{{terms_of_payment}}</div>
+                </div>
+                <div class="footer-top-row-2-left-col-2">
+                    <div class="field-title">Echéance </div>
+                    <div class="field"> {{due_date}}</div>
+                </div>
+            </div>
+            <div class="footer-top-row-2-right">
+                <div> <span class="field-title">Total remise</span> <span class="field">{{total_discount}}</span></div>
+                <div> <span class="field-title">Montant HT</span> <span class="field">{{amount_without_VAT}}</span></div>
+                <div> <span class="field-title">TVA</span> <span class="field">{{vat}}</span></div>
+                <div> <span class="field-title">Net à payer</span> <span class="field">{{total_to_pay}}</span></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
